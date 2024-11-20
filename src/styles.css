@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --marty-yellow: #f3ba0c;
+}
+
+header {
+  background-color: var(--marty-yellow);
+  height: 8rem;
+  color: white;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.flex{
+  display: flex;
+}
+
+nav{
+  justify-content: center;
+  gap: 4ch;
+}
+
+nav,
+header h1{
+  flex: 1;
+  margin: auto 0;
+}
+
+header h1 {
+  margin: auto auto auto 1ch;
+  font-size: 4rem;
+}
+
+button{
+  background: 0;
+  border: 0;
+  font-size: 1.5rem;
+}
