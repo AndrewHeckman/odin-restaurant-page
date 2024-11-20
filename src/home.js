@@ -19,7 +19,6 @@ function makeHero() {
   const headline1 = document.createElement("h2");
   const headline2 = document.createElement("h2");
   const headline3 = document.createElement("h2");
-  const text = document.createElement("p");
 
   hero.id = "hero";
   hero.className = "flex home-div";
@@ -41,13 +40,9 @@ function makeHero() {
   headline3.id = "headline3";
   headline3.className = "headline";
 
-  text.textContent = "Get you some fried chicken!";
-  text.id = "headline-text";
-
   heroText.appendChild(headline1);
   heroText.appendChild(headline2);
   heroText.appendChild(headline3);
-  heroText.appendChild(text);
 
   hero.appendChild(logo);
   hero.appendChild(heroText);
