@@ -51,26 +51,29 @@ button {
   font-size: 1.5rem;
 }
 
-#content {
-  min-height: var(--content-min-height);
+#background{
   background-image: url(./images/fried-chicken.jpg);
   background-size: cover;
 }
 
-#home-content {
-  color: white;
-  padding: 4rem;
-  background-color: rgb(0, 0, 0, 0.5);
+#content {
   min-height: var(--content-min-height);
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 4rem;
 }
 
-#hero {
-  width: clamp(75ch, 60vw, 150ch);
+#home-content {
+  color: white;
   margin: auto;
-  padding: 2rem 1rem;
+  /* min-height: var(--content-min-height); */
+  width: clamp(75ch, 60vw, 150ch);
   background: var(--darker-grey);
   border: 0.5rem solid var(--marty-yellow);
   border-radius: 1.5rem;
+}
+
+#hero {
+  padding: 2rem 1rem;
   align-items: center;
 }
 
