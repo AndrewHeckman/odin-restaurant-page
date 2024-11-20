@@ -51,7 +51,7 @@ button {
   font-size: 1.5rem;
 }
 
-#background{
+#background {
   background-image: url(./images/fried-chicken.jpg);
   background-size: cover;
 }
@@ -72,7 +72,7 @@ button {
   border-radius: 1.5rem;
 }
 
-#hero {
+.home-div {
   padding: 2rem 1rem;
   align-items: center;
 }
@@ -88,6 +88,27 @@ button {
 
 .headline {
   font-size: 3rem;
+}
+
+#offer-heading{
+  font-size: 2.5rem;
+}
+
+#offer-heading,
+#handshake {
+  text-align: center;
+}
+
+#offer-wrapper {
+  padding: 2rem;
+  gap: 2rem;
+  border-top: 2px solid var(--marty-yellow);
+  border-bottom: 2px solid var(--marty-yellow);
+  margin: 1rem 0;
+}
+
+#offer-wrapper>div {
+  flex: 1;
 }
 
 footer {

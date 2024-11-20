@@ -6,6 +6,7 @@ export function home() {
   homeDiv.id = "home-content";
 
   homeDiv.appendChild(makeHero());
+  homeDiv.appendChild(makeOffers());
 
   return homeDiv;
 }
@@ -20,7 +21,7 @@ function makeHero(){
   const text = document.createElement("p");
 
   hero.id = "hero";
-  hero.className = "flex";
+  hero.className = "flex home-div";
 
   logo.id = "hero-logo";
   logo.src = martyPng;
@@ -51,4 +52,61 @@ function makeHero(){
   hero.appendChild(heroText);
 
   return hero;
+}
+
+function makeOffers(){
+  const offerDiv = document.createElement("div");
+  const offerHeading = document.createElement("h2");
+  const offerWrapper = document.createElement("div");
+  const meal = document.createElement("div");
+  const mealHeading = document.createElement("h2");
+  const mealText = document.createElement("p");
+  const junior = document.createElement("div");
+  const juniorHeading = document.createElement("h2");
+  const juniorText = document.createElement("p");
+  const handshake = document.createElement("h2");
+
+  offerDiv.id = "offers";
+  offerDiv.className = "home-div";
+
+  offerWrapper.id = "offer-wrapper";
+  offerWrapper.className = "flex";
+
+  offerHeading.id = "offer-heading";
+  offerHeading.textContent = "Special offers";
+
+  offerDiv.appendChild(offerHeading);
+
+  meal.id = "meal";
+
+  mealHeading.id = "meal-heading";
+  mealHeading.textContent = "Marty Meal";
+  meal.appendChild(mealHeading);
+
+  mealText.id = "meal-text";
+  mealText.textContent = "Upgrade to a Marty Meal and get 2 sides and a drink or gravy!"
+  meal.appendChild(mealText);
+
+  offerWrapper.appendChild(meal);
+
+  junior.id = "junior";
+
+  juniorHeading.id = "junior-heading";
+  juniorHeading.textContent = "Marty Junior";
+  junior.appendChild(juniorHeading);
+
+  juniorText.id = "junior-text";
+  juniorText.textContent = "Perfect for the little ones! Comes with a Marty Barbie, Marty Transformer, or extra chicken tender!";
+  junior.appendChild(juniorText);
+
+  offerWrapper.appendChild(junior);
+
+  offerDiv.appendChild(offerWrapper);
+
+  handshake.id = "handshake";
+  handshake.textContent = "Every purchase comes with a handshake from the man himself!";
+
+  offerDiv.appendChild(handshake);
+
+  return offerDiv;
 }
