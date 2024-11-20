@@ -11,18 +11,18 @@ nav.addEventListener("click", navClick);
 content.appendChild(home());
 
 function navClick(event) {
-  content.removeChild(content.firstChild);
+  if (content.childElementCount > 0)  content.removeChild(content.firstChild);
 
   switch (event.target.id) {
-    case "home": {
+    case "home-button": {
       content.appendChild(home());
       break;
     }
-    case "menu": {
+    case "menu-button": {
       content.appendChild(menu());
       break;
     }
-    case "about": {
+    case "about-button": {
       content.appendChild(about());
       break;
     }
