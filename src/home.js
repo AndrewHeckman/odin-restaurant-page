@@ -7,11 +7,12 @@ export function home() {
 
   homeDiv.appendChild(makeHero());
   homeDiv.appendChild(makeOffers());
+  homeDiv.appendChild(makeTestimony());
 
   return homeDiv;
 }
 
-function makeHero(){
+function makeHero() {
   const hero = document.createElement("div");
   const logo = document.createElement("img");
   const heroText = document.createElement("div");
@@ -54,28 +55,28 @@ function makeHero(){
   return hero;
 }
 
-function makeOffers(){
+function makeOffers() {
   const offerDiv = document.createElement("div");
   const offerHeading = document.createElement("h2");
   const offerWrapper = document.createElement("div");
   const meal = document.createElement("div");
-  const mealHeading = document.createElement("h2");
+  const mealHeading = document.createElement("h3");
   const mealText = document.createElement("p");
   const junior = document.createElement("div");
-  const juniorHeading = document.createElement("h2");
+  const juniorHeading = document.createElement("h3");
   const juniorText = document.createElement("p");
-  const handshake = document.createElement("h2");
+  const handshake = document.createElement("h3");
 
   offerDiv.id = "offers";
   offerDiv.className = "home-div";
-
-  offerWrapper.id = "offer-wrapper";
-  offerWrapper.className = "flex";
 
   offerHeading.id = "offer-heading";
   offerHeading.textContent = "Special offers";
 
   offerDiv.appendChild(offerHeading);
+
+  offerWrapper.id = "offer-wrapper";
+  offerWrapper.className = "flex home-wrapper";
 
   meal.id = "meal";
 
@@ -109,4 +110,60 @@ function makeOffers(){
   offerDiv.appendChild(handshake);
 
   return offerDiv;
+}
+
+function makeTestimony() {
+  const testimony = document.createElement("div");
+  const testimonyHeading = document.createElement("h2");
+  const testimonyWrapper = document.createElement("div");
+  const testimony1 = document.createElement("div");
+  const quote1 = document.createElement("q");
+  const quoted1 = document.createElement("p");
+  const testimony2 = document.createElement("div");
+  const quote2 = document.createElement("q");
+  const quoted2 = document.createElement("p");
+  const etc = document.createElement("h3");
+
+  testimony.id = "testimony";
+  testimony.className = "home-div";
+
+  testimonyHeading.id = "testimony-heading";
+  testimonyHeading.textContent = "Hear from our satisfied customers:";
+
+  testimonyWrapper.id = "testimony-wrapper";
+  testimonyWrapper.className = "flex home-wrapper";
+
+  testimony1.id = "testimony-1";
+
+  quote1.id = "quote-1";
+  quote1.textContent = "It's food!";
+
+  quoted1.id = "quoted-1";
+  quoted1.textContent = "— A satisfied customer";
+
+  testimony2.id = "testimony-2";
+
+  quote2.id = "quote-2";
+  quote2.textContent = "They tried their best!";
+
+  quoted2.id = "quoted-2";
+  quoted2.textContent = "— A different satisfied customer";
+
+  etc.id = "etc";
+  etc.textContent = "Et cetera!";
+
+  testimony1.appendChild(quote1);
+  testimony1.appendChild(quoted1);
+
+  testimony2.appendChild(quote2);
+  testimony2.appendChild(quoted2);
+
+  testimonyWrapper.appendChild(testimony1);
+  testimonyWrapper.appendChild(testimony2);
+
+  testimony.appendChild(testimonyHeading);
+  testimony.appendChild(testimonyWrapper);
+  testimony.appendChild(etc);
+
+  return testimony;
 }

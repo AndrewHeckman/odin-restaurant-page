@@ -74,7 +74,6 @@ button {
 
 .home-div {
   padding: 2rem 1rem;
-  align-items: center;
 }
 
 #hero-logo {
@@ -90,24 +89,26 @@ button {
   font-size: 3rem;
 }
 
-#offer-heading{
+h2 {
   font-size: 2.5rem;
 }
 
-#offer-heading,
-#handshake {
+.home-div>* {
   text-align: center;
 }
 
 #offer-wrapper {
-  padding: 2rem;
-  gap: 2rem;
   border-top: 2px solid var(--marty-yellow);
   border-bottom: 2px solid var(--marty-yellow);
+}
+
+.home-wrapper {
+  padding: 2rem;
+  gap: 2rem;
   margin: 1rem 0;
 }
 
-#offer-wrapper>div {
+.home-wrapper>div {
   flex: 1;
 }
 
