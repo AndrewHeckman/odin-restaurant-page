@@ -13,15 +13,23 @@
   --content-min-height: calc(100vh - calc(8rem + 0px));
 }
 
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* -------------------------------------------------------------------------- */
+/* --------------------------------- HEADER --------------------------------- */
+/* -------------------------------------------------------------------------- */
+
 header {
   background-color: var(--marty-yellow);
   height: 8rem;
   justify-content: space-between;
   padding: 1rem;
-}
-
-.flex {
-  display: flex;
 }
 
 nav {
@@ -160,6 +168,35 @@ h2 {
   flex: 1 1 100%;
   padding-left: 2ch;
 }
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------------ ABOUT SECTION ----------------------------- */
+/* -------------------------------------------------------------------------- */
+
+#about-content {
+  color: white;
+  margin: auto;
+  /* min-height: var(--content-min-height); */
+  width: clamp(75ch, 60vw, 150ch);
+  background: var(--darker-grey);
+  border: 0.5rem solid var(--marty-yellow);
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.about-div{
+  margin: 2rem;
+}
+
+.about-heading{
+  width: fit-content;
+  border-bottom: 2px solid var(--marty-yellow);
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* --------------------------------- FOOTER --------------------------------- */
+/* -------------------------------------------------------------------------- */
 
 footer {
   color: black;
