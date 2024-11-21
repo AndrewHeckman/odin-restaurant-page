@@ -51,13 +51,13 @@ button {
   font-size: 1.5rem;
 }
 
-button:hover{
-  border-bottom: 2px solid white;
+button:hover {
+  border-bottom: 4px solid white;
 }
 
 #background {
   background-image: url(./images/fried-chicken.jpg);
-  background-size: cover;
+  background-size: 150%;
 }
 
 #content {
@@ -65,6 +65,10 @@ button:hover{
   background-color: rgb(0, 0, 0, 0.5);
   padding: 4rem;
 }
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------------ HOME SECTION ------------------------------ */
+/* -------------------------------------------------------------------------- */
 
 #home-content {
   color: white;
@@ -86,10 +90,14 @@ button:hover{
 
 #hero-logo {
   width: 16rem;
+  min-width: 16rem;
+  max-height: 16rem;
+  /* flex: 0 0 auto; */
   aspect-ratio: 1 / 1;
 }
 
 #hero-text {
+  /* flex: 0 1 auto; */
   padding: 2rem;
 }
 
@@ -115,6 +123,42 @@ h2 {
 
 .home-wrapper>div {
   flex: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------------ MENU SECTION ------------------------------ */
+/* -------------------------------------------------------------------------- */
+
+#menu-content {
+  background-color: white;
+  margin: auto;
+  /* min-height: var(--content-min-height); */
+  width: clamp(75ch, 60vw, 150ch);
+  border: 0.5rem solid var(--marty-yellow);
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.menu-item {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.menu-item-name,
+.menu-item-price {
+  font-weight: 600;
+}
+
+.menu-item-line {
+  border-bottom: 2px dotted black;
+  flex: 1;
+  height: calc(1em + 2px);
+}
+
+.menu-item-description {
+  flex: 1 1 100%;
+  padding-left: 2ch;
 }
 
 footer {
